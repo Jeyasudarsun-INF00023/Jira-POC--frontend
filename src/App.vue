@@ -225,7 +225,7 @@ const incidents = ref([])
 const jiraError = ref(false)
 const loading = ref(false)
 const filter = ref('')
-const API_BASE = 'http://localhost:8000'
+const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000'
 
 const columns = [
   { name: 'key', label: 'TICKET ID', field: 'key', align: 'left', sortable: true },
